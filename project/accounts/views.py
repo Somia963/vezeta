@@ -7,7 +7,7 @@ from .models import Profile
 # accounts/views.py
 def doctors_list(request):
     if request.method=="GET":
-        doctors = User.objects.all()
+        doctors = Profile.objects.all()
         return render(request , 'user/doctors_list.html' , {
         'doctors'  : doctors,
     })
